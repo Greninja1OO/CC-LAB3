@@ -12,7 +12,7 @@ class Cart:
         return Cart(data['id'], data['username'], data['contents'], data['cost'])
 def get_cart(username: str) -> list:
     cart_details = dao.get_cart(username)
-    if cart_details is None:
+    if cart_details is None: 
         return []
     items = []
     i2 = []
