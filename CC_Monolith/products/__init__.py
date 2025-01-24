@@ -6,7 +6,7 @@ class Product:
         self.description = description
         self.cost = cost
         self.qty = qty
-    def load(data):
+    def load(data): 
         return Product(data['id'], data['name'], data['description'], data['cost'], data['qty'])
 def list_products() -> list[Product]:
     result = [Product.load(i) for i in dao.list_products()]
